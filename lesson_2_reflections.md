@@ -29,8 +29,41 @@ is different from the working directory, because there might a whole bunch of fi
 in the working directory that you don't want to commit. It's value is that it
 gives the user control over what gets added to an individual commit. 
 
-How can you use the staging area to make sure you have one commit per logical
+## Git commit
+
+* `git commit
+	* opens up a commit message editor in the default editor. 
+	* It's standard to write the commit messages like they
+	are a command
+	* save the file, quit the editor
+	* in vim:
+		* press i to begin editing (insert)
+		* press escape then :wq to save, exit, and commit
+		* escape then :q to quit without commiting
+
+* `git diff
+	* when git diff is run using commit id's, it shows the difference between
+	the commits
+	* when git diff is run without commit id's, it will compare the staging area 
+	to the working directory
+
+* `git diff --staged 
+	* shows the difference between the files in the staging area, and the most recent commit. 
+
+* `git reset --hard
+	* discards any changes in the staging area AND the working directory
+	* be very careful using this - most changes in git are reversable, but this isn't
+
+* `git checkout master
+	* if you are in an older commit (i.e. a detached head), this will bring you back to the 
+	most recent commit
+
+###How can you use the staging area to make sure you have one commit per logical
 change?
+
+Even if more than one thing is changed, all you have to do is stage them by one 
+logical grouping at a time and commit. Git status can be used to verify everything
+you want is in there before committing.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
