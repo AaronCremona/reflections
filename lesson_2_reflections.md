@@ -65,8 +65,33 @@ Even if more than one thing is changed, all you have to do is stage them by one
 logical grouping at a time and commit. Git status can be used to verify everything
 you want is in there before committing.
 
-What are some situations when branches would be helpful in keeping your history
+## Branches
+
+* git allows you to create labels for commits - these are called branches
+* the main branch is called master 
+	* every time you create a repository, git automatically creates a master branch
+* when we weren't on the main commit, we got a detached head error
+	* basically a warning that you aren't on the master branch
+* possible to checkout a branch, just like you would a commit
+* if you make an updated commit, the label moves to the new commit
+* it's possible to add multiple labels to the same commit, but the label only advances 
+for the checked out commit
+* `git branch
+	* with no argument, it shows the current branch name
+* `git branch new-branch-name
+	* creates a new branch with the new branch name
+	* when `git branch is run again, it shows both branch names, with a * by the currently 
+	checked out branch
+* `git checkout new-branch-name
+	* checkout the new branch
+	* at the firt checkout, it has the same files as the master
+
+### What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+
+Branches would be useful any time there is a need to create multiple versions that need to exist side 
+by side. Examples are an experimental change, developing a new feature while keeping the working version 
+intact, developing two distinct versions.
 
 How do the diagrams help you visualize the branch structure?
 
