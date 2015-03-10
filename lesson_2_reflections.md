@@ -91,7 +91,9 @@ organized? How would branches help?
 
 Branches would be useful any time there is a need to create multiple versions that need to exist side 
 by side. Examples are an experimental change, developing a new feature while keeping the working version 
-intact, developing two distinct versions.
+intact, developing two distinct versions. Answers from the udacity branch. "Context switching." A new 
+branch is made for any new activity. The master is the production quality branch, and he makes 
+a new branch for any other activity. Fixing a bug, making a new feature, etc. 
 
 How do the diagrams help you visualize the branch structure?
 
