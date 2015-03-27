@@ -91,7 +91,6 @@ for the checked out commit
 	the detached head state are unreachable
 	* however you can save the commits as a new branch with the command:
 	`git checkout -b new_branch_name
-	then checkout the new branch name
 
 ### What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
@@ -102,10 +101,45 @@ intact, developing two distinct versions. Answers from the udacity branch. "Cont
 branch is made for any new activity. The master is the production quality branch, and he makes 
 a new branch for any other activity. Fixing a bug, making a new feature, etc. 
 
-How do the diagrams help you visualize the branch structure?
+### How do the diagrams help you visualize the branch structure?
 
-What is the result of merging two branches together? Why do we represent it in
+The diagrams can show which commits branches diverged from. It can also give an idea
+about which commits are reachable on each branch. 
+
+## Merging
+
+* git analyzes 3 commits to do a merge: the commit before the branch, and the last commit in each branchs
+* the new merged files will be a new commit
+* the merged file stores information about both of it's parents commits
+* if we are trying to merge something into the master, we want the new commit to be the new
+tip of the master
+* often, this is referred to as merging the not_master_branch into the master branch
+	* this is way different than just committing the state of the branch to the master - that
+	would lose all the history of the branch, and none of the changes to the master branch
+	since the branch would be incorporated. Terrible!
+* once a merge is done, there is no need for the old branch label, so that can be deleted
+	* the commits will still be there as long as they are reachable 
+	* however, if there is no other way to reach the branch, deleting it does effectively delete
+	the commits associated with that name
+	* after the merge, the commits are displayed in order of timestamp
+* if merging into the master
+	* checkout the master and confirm with `git branch
+	* `git merge master branch_name_to_merge
+	* hit enter and enter a commit message - the default is usually good here
+	* git indicates the merge was done and what files change
+* the chronological order of the git log means that running git diff on what used to be two 
+different branches results in a lot of differences because it is not comparing the changes to the parent
+commit
+	* to see the differences from the parent - git show can be used
+* to remove the branch label
+	`git branch -d old_branch_name
+
+### What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
-What are the pros and cons of Gits automatic merging vs. always doing merges
+The result of merging is that we end up with the most up to date combine version of the two branches 
+compared to just before they split off. The merged state really has two parents, the tip of each branch 
+before the merge, so that is why the diagram arrows point back to both branches. 
+
+### What are the pros and cons of Gits automatic merging vs. always doing merges
 manually?
