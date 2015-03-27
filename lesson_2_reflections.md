@@ -85,6 +85,13 @@ for the checked out commit
 * `git checkout new-branch-name
 	* checkout the new branch
 	* at the firt checkout, it has the same files as the master
+* `git log --graph --oneline <branch names to compare>
+* from a detached head state, if you make a commit, you are basically making a new branch
+	* but if you checkout another branch, those changes are lost, basically, those commits in 
+	the detached head state are unreachable
+	* however you can save the commits as a new branch with the command:
+	`git checkout -b new_branch_name
+	then checkout the new branch name
 
 ### What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
