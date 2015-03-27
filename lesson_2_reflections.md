@@ -141,5 +141,16 @@ The result of merging is that we end up with the most up to date combine version
 compared to just before they split off. The merged state really has two parents, the tip of each branch 
 before the merge, so that is why the diagram arrows point back to both branches. 
 
+* When there is any ambiguity in the merge, git doesn't make any guesses, it just asks the user
+* To add the changes in master since the branch to the tip of another branch
+	* `git checkout other_branch
+	* `git merge master other_branch 
+	* if there are conflicts
+		* the update fails
+		* open the file with conflicts
+		* a bunch of less than signs mark the area with the conflict
+			* the lines break up the code into 3 sections, the original code
+			before the branch, and the two heads of each branch
+
 ### What are the pros and cons of Gits automatic merging vs. always doing merges
 manually?
