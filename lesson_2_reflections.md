@@ -151,6 +151,15 @@ before the merge, so that is why the diagram arrows point back to both branches.
 		* a bunch of less than signs mark the area with the conflict
 			* the lines break up the code into 3 sections, the original code
 			before the branch, and the two heads of each branch
+		* manually fix the conflics and save the file
+		* add the file to the staging area and then commit
+		* the merge is done! 
+* tip: `git log -n1 
+	* can be used to go a git log with a limited number of commits (eg 1)
 
 ### What are the pros and cons of Gits automatic merging vs. always doing merges
 manually?
+
+Automatic merging makes life so much easier when there are no conflicts. Always doing
+merges manually woudl be very time consuming. The con of automatic merging is that it 
+might make some changes that you didn't intend. 
