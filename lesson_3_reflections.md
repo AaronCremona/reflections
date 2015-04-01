@@ -62,3 +62,26 @@ like a new feature or separate concept, while leaving the main working version i
 If you are going to be working offline and the remote has diverged from your local copy, it is a way
 to check differences before you merge. This could let you decide whether to merge, or make a new
 branch. 
+
+## Pull request
+* used to collaborate on github
+* example workflow
+	1. Make a new branch
+	2. Checkout the branch
+	3. Make changes, add them, commit them
+	4. Push the new branch
+	5. The branch should be visible on github
+	6. Go back to the main page for the repository
+	7. Checkout the branch on github and click pull request
+	8. By default, github assumes you want to merge back into the branch you forked from, but this 
+	can be changed with a dropdown
+* anyone wathing the fork will get email notifications for pull requests
+* You can also think of a pull request as a merge request
+* It's possible to leave comments right in github (either general or inline)
+* If there are no conflicts, it is possible to merge right on github
+
+### How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+You would have to email files, use shared network space, share a physical drive to copy files, or setup 
+an internal git server. It would be very hard to keep track of files and which version files go with which other files. 
+The only thing easier that would be easier is skipping all the committing and pushing. 
